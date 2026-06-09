@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "handlebars": "^4.7.9"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=js/index.js"
+  },
+  "name": "squelette-td7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}

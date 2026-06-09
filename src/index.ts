@@ -1,8 +1,6 @@
 import { loadPicture, loadResource } from "./lib/photoloader";
 import { displayPicture, displayCategory, displayComments } from "./ui";
 
-console.log("APP START");
-
 function getPicture(id: string | number) {
 
     loadPicture(id)
@@ -25,7 +23,6 @@ function getPicture(id: string | number) {
         .catch(console.error);
 }
 
-// init
 const id =
     window.location.hash
         ? window.location.hash.substring(1)

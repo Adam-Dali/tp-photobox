@@ -17,9 +17,7 @@ export function displayPicture(photo: any): void {
     if (!container) return;
 
     container.innerHTML = template({
-        img:
-            "https://webetu.iutnc.univ-lorraine.fr" +
-            photo.photo.url.href,
+        img: "https://webetu.iutnc.univ-lorraine.fr" + photo.photo.url.href,
         titre: photo.photo.titre,
         descr: photo.photo.descr,
         type: photo.photo.type,
@@ -29,22 +27,18 @@ export function displayPicture(photo: any): void {
 }
 
 export function displayCategory(cat: any): void {
-
     const el = document.querySelector("#cat");
     if (!el) return;
-
     el.textContent = `Catégorie : ${cat.categorie.nom}`;
 }
 
 export function displayComments(data: any): void {
-
     const ul = document.querySelector("#comments");
     if (!ul) return;
 
     ul.innerHTML = "";
 
     (data.comments || []).forEach((c: any) => {
-
         const li = document.createElement("li");
         li.textContent = `${c.pseudo} : ${c.content}`;
         ul.appendChild(li);
